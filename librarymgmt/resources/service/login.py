@@ -34,6 +34,7 @@ class LoginService:
                 secret = "secret"
                 algo = "HS256"
                 token = jwt.encode(payload=payload, key=secret, algorithm=algo)
+                print(token)
                 resp.media = {
                     "token": token
                 }
